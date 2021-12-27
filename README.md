@@ -33,7 +33,7 @@ To contribute to the main copy:
 
 - Create a branch against main or raise an issue on GitHub :exclamation:
 - Raise a pull-request with your resources.
-- If it fits the current pattern, it will be merged :tick
+- If it fits the current pattern, it will be merged :tick:
 
 
-Looking for AWS?  Check out my AWS repo of the same thing :wink:
+Looking for [AWS](https://github.com/craigthackerx/aws-terraform-compliance-naming-convention)?  Check out my AWS repo of the same thing :wink:
