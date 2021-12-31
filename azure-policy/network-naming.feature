@@ -210,6 +210,17 @@ Feature: Naming Convention For Network Azure Items
       | resource_name                  | name_key |
       | azurerm_network_security_group | name     |
 
+#Best practice towards NSG firewall rules should be followed with Action Service Direction - e.g. AllowHttpsInbound rather than predefined naming conventions.
+#  @case_sensitive
+#  Scenario Outline: Naming Standard For Network Security Group Rules
+#    Given I have <resource_name> defined
+#    When it has <name_key>
+#    Then it must have name
+#    Then its value must match the "nsgsr-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
+#
+#    Examples:
+#      | resource_name                 | name_key |
+#      | azurerm_network_security_rule | name     |
 
   @case_sensitive
   Scenario Outline: Naming Standard For Network Watcher
