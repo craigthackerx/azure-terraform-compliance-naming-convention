@@ -123,17 +123,6 @@ Feature: Naming Convention For Database Items
       | azurerm_synapse_spark_pool | name     |
 
   @case_sensitive
-  Scenario Outline: Naming Standard For Synapse Dedicated Spark Pool
-    Given I have <resource_name> defined
-    When it has <name_key>
-    Then it must have name
-    Then its value must match the "synsp-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
-
-    Examples:
-      | resource_name              | name_key |
-      | azurerm_synapse_spark_pool | name     |
-
-  @case_sensitive
   Scenario Outline: Naming Standard For SQL Managed Instance
     Given I have <resource_name> defined
     When it has <name_key>
