@@ -210,16 +210,17 @@ Feature: Naming Convention For Network Azure Items
       | resource_name                  | name_key |
       | azurerm_network_security_group | name     |
 
-  @case_sensitive
-  Scenario Outline: Naming Standard For Network Security Group Rules
-    Given I have <resource_name> defined
-    When it has <name_key>
-    Then it must have name
-    Then its value must match the "nsgsr-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
-
-    Examples:
-      | resource_name                 | name_key |
-      | azurerm_network_security_rule | name     |
+#Best practice towards NSG firewall rules should be followed with Action Service Direction - e.g. AllowHttpsInbound rather than predefined naming conventions.
+#  @case_sensitive
+#  Scenario Outline: Naming Standard For Network Security Group Rules
+#    Given I have <resource_name> defined
+#    When it has <name_key>
+#    Then it must have name
+#    Then its value must match the "nsgsr-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
+#
+#    Examples:
+#      | resource_name                 | name_key |
+#      | azurerm_network_security_rule | name     |
 
   @case_sensitive
   Scenario Outline: Naming Standard For Network Watcher
@@ -342,16 +343,17 @@ Feature: Naming Convention For Network Azure Items
       | resource_name                   | name_key |
       | azurerm_virtual_network_peering | name     |
 
-  @case_sensitive
-  Scenario Outline: Naming Standard For Virtual Network Subnet
-    Given I have <resource_name> defined
-    When it has <name_key>
-    Then it must have name
-    Then its value must match the "snet-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
-
-    Examples:
-      | resource_name  | name_key |
-      | azurerm_subnet | name     |
+#Subnet naming is disabled as you need a custom policy for each subnet, and Azure has it so things such as AzureBastionSubnet and GatewaySubnet are defined names which may cause an error in the policy.  Leaving commented to show I did try to follow documentation :')
+#  @case_sensitive
+#  Scenario Outline: Naming Standard For Virtual Network Subnet
+#    Given I have <resource_name> defined
+#    When it has <name_key>
+#    Then it must have name
+#    Then its value must match the "snet-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
+#
+#    Examples:
+#      | resource_name  | name_key |
+#      | azurerm_subnet | name     |
 
   @case_sensitive
   Scenario Outline: Naming Standard For Virtual WAN
