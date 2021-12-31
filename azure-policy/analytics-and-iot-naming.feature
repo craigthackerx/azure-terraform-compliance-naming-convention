@@ -100,7 +100,7 @@ Feature: Naming Convention For Analytics and IoT ]Items
       | azurerm_eventhub_namespace | name     |
 
   @case_sensitive
-  Scenario Outline: Naming Standard For Event Hub Namespace
+  Scenario Outline: Naming Standard For Event Hub
     Given I have <resource_name> defined
     When it has <name_key>
     Then it must have name
@@ -263,9 +263,3 @@ Feature: Naming Convention For Analytics and IoT ]Items
     Examples:
       | resource_name                                     | name_key |
       | azurerm_time_series_insights_standard_environment | name     |
-
-
-
-
-
-

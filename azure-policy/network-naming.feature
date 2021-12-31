@@ -145,7 +145,7 @@ Feature: Naming Convention For Network Azure Items
 
 #Can't easily distinguish between internal and external lb via resource, so general name used instead of separate entries
   @case_sensitive
-  Scenario Outline: Naming Standard For Load Balancer
+  Scenario Outline: Naming Standard For Load Balancer Device
     Given I have <resource_name> defined
     When it has <name_key>
     Then it must have name
@@ -156,7 +156,7 @@ Feature: Naming Convention For Network Azure Items
       | azurerm_lb    | name     |
 
   @case_sensitive
-  Scenario Outline: Naming Standard For Load Balancer
+  Scenario Outline: Naming Standard For Load Balancer Rule
     Given I have <resource_name> defined
     When it has <name_key>
     Then it must have name
