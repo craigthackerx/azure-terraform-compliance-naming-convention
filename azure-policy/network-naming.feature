@@ -193,7 +193,7 @@ Feature: Naming Convention For Network Azure Items
     Given I have <resource_name> defined
     When it has <name_key>
     Then it must have name
-    Then its value must match the "nic-.*-(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
+    Then its value must match the "(nic|pnic|snic)-.*(dev|dev2|mvp|ppd|prd|prd1|prd2|stg|tst|tst1|tst2|uat).*" regex
 
     Examples:
       | resource_name             | name_key |
