@@ -53,4 +53,4 @@ Feature: Naming Convention For General Azure Items
 
     Examples:
       | resource_name          | name_key |
-      | azurerm_api_management | name     |
+      | azurerm_resource_group | name     |
