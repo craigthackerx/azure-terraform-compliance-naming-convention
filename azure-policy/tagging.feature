@@ -16,4 +16,4 @@ Feature: Tagging Policy
       | tags        | value              |
       | CostCentre  | .+                 |
       | ProjectName | .+                 |
-      | Environment | ^(prod\|uat\|dev)$ |
+      | Environment | ^(prod\|uat\|tst\|dev)$ |
